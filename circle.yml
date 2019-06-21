@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          no-workspace: true
+          command: echo 'Running tests one and two'
+          post-steps:
+            - run:
+                name: tests one
+                command: npm test
+                working_directory: one
+            - run:
+                name: tests two
+                command: npm test
+                working_directory: two
