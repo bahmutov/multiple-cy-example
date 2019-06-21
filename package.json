@@ -1,0 +1,18 @@
+{
+  "name": "multiple-cy-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "run-s install:one install:two",
+    "install:one": "cd one && npm ci",
+    "install:two": "cd two && npm ci"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  }
+}
